@@ -14,11 +14,6 @@ export const Dashboard = () => {
         if(!token){
             navigate( "/signin", { replace: true });
         } 
-
-        
-        
-        // You can now use the token to make authenticated requests or pass it to other components
-        console.log(token); // For demonstration purposes
     }, []);
 
     

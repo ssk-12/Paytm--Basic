@@ -8,19 +8,16 @@ export const Balance = () => {
         // Define an async function inside useEffect
         const fetchBalance = async () => {
             try {
-                // Retrieve the token from localStorage
                 const token = localStorage.getItem("token");
-
                 if (!token) {
                     console.log("No token found");
-                    // Handle case when token is not available, e.g., redirect to login
                     return;
                 }
 
                 // Make the API call with the token in the Authorization header
                 const response = await axios.get("http://localhost:3000/api/v1/account/balance", {
                     headers: {
-                        Authorization: `Bearer ${token}`, // Assuming a Bearer token, adjust if needed
+                        Authorization: `Bearer ${token}`, 
                     },
                 });
 
